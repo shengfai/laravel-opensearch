@@ -1,0 +1,29 @@
+{
+    "name": "shengfai\/laravel-opensearch",
+    "description": "Package description here.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shengfai",
+            "email": "shengfai@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": ">=7.0",
+        "laravel/scout": "^8.4",
+        "shengfai/aliyun-opensearch-sdk": "dev-develop"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shengfai\\OpenSearch\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shengfai\\OpenSearch\\OpenSearchServiceProvider"
+            ]
+        }
+    }
+}
