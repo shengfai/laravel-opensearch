@@ -3,6 +3,7 @@
 namespace Shengfai\OpenSearch;
 
 use Laravel\Scout\EngineManager;
+use Illuminate\Support\ServiceProvider;
 
 /**
  * 开放搜索服务提供者
@@ -11,7 +12,7 @@ use Laravel\Scout\EngineManager;
  * @package \Shengfai\OpenSearch
  * @author ShengFai <shengfai@qq.com>
  */
-class OpenSearchServiceProvider
+class OpenSearchServiceProvider extends ServiceProvider
 {
 
     /**
@@ -21,6 +22,11 @@ class OpenSearchServiceProvider
     {
     }
 
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
     public function boot()
     {
         resolve(EngineManager::class)->extend('opensearch', function ($app) {
